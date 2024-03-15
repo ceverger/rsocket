@@ -1,5 +1,6 @@
 /* openio.cpp - реализация методов класса RSocket для 
-					 открытия и закрытия сокета ---------- */
+                открытия и закрытия сокета ---------- */
+
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
@@ -49,6 +50,8 @@
 	
 	bool RSocket::closeIO()
 	{
+		/* Закрытие устройства ввода-вывода */
+		
 		if(close(fd))
 		{
 			errstr = strerror(errno);
