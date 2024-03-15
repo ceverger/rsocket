@@ -1,5 +1,5 @@
 /* connect.cpp - реализация метода класса RSocket для соединения с 
-                 удаленным хостом -------------------------------- */
+                 bool connectToHost(const char *ipaddr, int port) */
 							  
 #include <errno.h>
 #include <string.h>
@@ -10,6 +10,8 @@
 
 	bool RSocket::connectToHost(const char *ipaddr, int port)
 	{
+		/* Метод осуществляет соединением сокета у даленным хостом */
+		
 		if(state != opened)
 		{
 			errstr = connect_error_state;
