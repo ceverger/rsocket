@@ -10,7 +10,7 @@
 
 	bool RSocket::connectToHost(const char *ipaddr, int port)
 	{
-		/* Метод осуществляет соединением сокета у даленным хостом */
+		/* Метод осуществляет соединением сокета c даленным хостом */
 		
 		if(state != opened)
 		{
