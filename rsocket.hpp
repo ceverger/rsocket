@@ -1,4 +1,4 @@
-// rsocket.hpp - описание класса RSocket для работы с сокетами
+// rsocket.hpp - описание класса RSocket
 
 #include "iodevice.hpp"
 
@@ -16,7 +16,7 @@
 
 
 	class RSocket : public IODevice
-	{
+	{ 	/* Класс осуществляет управление сетевыми сокетами */
 		public:
 		
 			enum 
