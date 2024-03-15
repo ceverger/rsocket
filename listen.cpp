@@ -1,5 +1,5 @@
-/* listen.cpp - реализация метода класса RSocket для настройки
-                прослушивания сокета ------------------------- */
+/* listen.cpp - реализация метода класса RSocket
+                bool listenSock(int maxconn) --- */
 
 #include <errno.h>
 #include <string.h>
@@ -10,6 +10,8 @@
 
 	bool RSocket::listenSock(int maxconn)
 	{
+		/* Метод превращает открытый сокет в прослушивающий */
+		
 		if(state != opened)
 		{
 			errstr = listen_error_state;
