@@ -1,5 +1,5 @@
-/* accept.cpp - реализация метода класса RSocket для получения 
-				    нового сокета для соединения ----------------- */
+/* accept.cpp - реализация метода класса RSocket
+                acceptSock(RSocket & rsocket) -- */
 
 #include <errno.h>
 #include <string.h>
