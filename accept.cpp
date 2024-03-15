@@ -1,5 +1,5 @@
 /* accept.cpp - реализация метода класса RSocket
-                acceptSock(RSocket & rsocket) -- */
+                bool acceptSock(RSocket & rsocket) */
 
 #include <errno.h>
 #include <string.h>
@@ -10,6 +10,9 @@
 					  
 	bool RSocket::acceptSock(RSocket & rsocket)
 	{
+		/* Метод блокируется в ожидании получения нового сетевого 
+                   соединения и ассоциированного с ним файлового дескриптора */
+                  
 		if(state != listened)
 		{
 			errstr = accept_error_state;
@@ -27,8 +30,9 @@
 		struct sockaddr *p_addr;
 		struct sockaddr_in addr4;
 		struct sockaddr_in6 addr6;
-		
-		int family = getFamily(m_sockType);
+
+		/* Полчение локального значения семейства протоколов */
+			int family = getFamily(m_sockType); 
 		
 		bzero(&addr4, sizeof(addr4));
 		bzero(&addr6, sizeof(addr6));
