@@ -1,5 +1,5 @@
-/* bind.cpp - реализация метода класса RSocket для связывания сокета
-              с ip-адресом и портом -------------------------------- */
+/* bind.cpp - реализация метода класса RSocket
+             void bindSock(const char *ipaddr, int port) */
 				  
 #include <errno.h>
 #include <string.h>
@@ -10,6 +10,8 @@
 
 	bool RSocket::bindSock(const char *ipaddr, int port)
 	{
+		/* Метод связывает сетвой адрес и порт с дескриптором сокета */
+		
 		if(state != opened)
 		{
 			errstr = bind_error_state;
