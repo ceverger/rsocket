@@ -33,9 +33,10 @@
 
 		/* Полчение локального значения семейства протоколов */
 			int family = getFamily(m_sockType); 
-		
-		bzero(&addr4, sizeof(addr4));
-		bzero(&addr6, sizeof(addr6));
+
+		/* Обнуление структур адреса сокета */
+			bzero(&addr4, sizeof(addr4));
+			bzero(&addr6, sizeof(addr6));
 
 		switch(family)
 		{ 
